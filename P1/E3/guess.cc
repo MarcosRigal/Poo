@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
   srand(time(NULL));
-  int nrand = (rand() % 51);
+  int nrand = (rand() % 10)+1;
   int numero;
   while (numero != nrand)
   {
