@@ -8,10 +8,10 @@ class Dados
 private:
   int d1_;
   int d2_;
-  int lanz1_;
-  int lanz2_; 
-  int sum1_;
-  int sum2_;
+  float lanz1_;
+  float lanz2_; 
+  float sum1_;
+  float sum2_;
   int v0_1_;
   int v1_1_;
   int v2_1_;

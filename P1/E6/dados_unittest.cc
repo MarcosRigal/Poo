@@ -88,3 +88,40 @@ TEST(Dados, Media){
     EXPECT_LT(d.getMedia2(), 7);
   }
 }
+
+TEST(Dados, Ultimos){
+  Dados d;
+  int ultimos[5];
+  d.getUltimos1(ultimos);
+  for (int i = 0; i < 5; i++)
+  {
+    EXPECT_EQ(ultimos[i],0);
+  }
+  d.getUltimos2(ultimos);
+  for (int i = 0; i < 5; i++)
+  {
+    EXPECT_EQ(ultimos[i],0);
+  }
+  d.setDado1(6);
+  d.setDado1(5);
+  d.setDado1(4);
+  d.setDado1(3);
+  d.setDado1(2);
+  d.setDado1(1);
+  d.getUltimos1(ultimos);
+  for (int i = 0; i < 5; i++)
+  {
+    EXPECT_EQ(ultimos[i],(i+1));
+  }
+  d.setDado2(6);
+  d.setDado2(5);
+  d.setDado2(4);
+  d.setDado2(3);
+  d.setDado2(2);
+  d.setDado2(1);
+  d.getUltimos2(ultimos);
+  for (int i = 0; i < 5; i++)
+  {
+    EXPECT_EQ(ultimos[i],(i+1));
+  }
+}

@@ -95,20 +95,24 @@ int Dados::getLanzamientos2()
 
 float Dados::getMedia1()
 {
+  float media = 0;
   if (lanz1_ == 0)
   {
-    return 0;
+    return media;
   }
-  return (sum1_/lanz1_);
+  media = sum1_/lanz1_;
+  return media;
 }
 
 float Dados::getMedia2()
 {
+  float media = 0;
   if (lanz2_ == 0)
   {
-    return 0;
+    return media;
   }
-  return (sum2_/lanz2_);
+  media = sum2_/lanz2_;
+  return media;
 }
 
 void Dados::ordena1()
