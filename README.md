@@ -1,3 +1,5 @@
+![POO](https://trungtq.com/wp-content/uploads/2018/12/object-oriented-programming-oop.png)
+
 # Instructions:
 The practices are organized as follows:
   
