@@ -12,16 +12,8 @@ private:
   float lanz2_; 
   float sum1_;
   float sum2_;
-  int v0_1_;
-  int v1_1_;
-  int v2_1_;
-  int v3_1_;
-  int v4_1_;
-  int v0_2_;
-  int v1_2_;
-  int v2_2_;
-  int v3_2_;
-  int v4_2_;
+  int v1[5];
+  int v2[5];
 public:
   Dados();//El constructor no devuelve nada
   void lanzamiento();//El metodo no devuelve nada

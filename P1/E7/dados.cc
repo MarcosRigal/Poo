@@ -13,16 +13,12 @@ Dados::Dados()
   lanz2_=0;
   sum1_=0;
   sum2_=0;
-  v0_1_=0;
-  v1_1_=0;
-  v2_1_=0;
-  v3_1_=0;
-  v4_1_=0;
-  v0_2_=0;
-  v1_2_=0;
-  v2_2_=0;
-  v3_2_=0;
-  v4_2_=0;
+  for (int i = 0; i < 5; i++)
+  {
+    v1[i]=0;
+    v2[i]=0;
+  }
+  
 }
 
 void Dados::lanzamiento()
@@ -117,36 +113,36 @@ float Dados::getMedia2()
 
 void Dados::ordena1()
 {
-  v4_1_=v3_1_;
-  v3_1_=v2_1_;
-  v2_1_=v1_1_;
-  v1_1_=v0_1_;
-  v0_1_=d1_;
+  v1[4]=v1[3];
+  v1[3]=v1[2];
+  v1[2]=v1[1];
+  v1[1]=v1[0];
+  v1[0]=d1_;
 }
 
 void Dados::ordena2()
 {
-  v4_2_=v3_2_;
-  v3_2_=v2_2_;
-  v2_2_=v1_2_;
-  v1_2_=v0_2_;
-  v0_2_=d2_;
+  v2[4]=v2[3];
+  v2[3]=v2[2];
+  v2[2]=v2[1];
+  v2[1]=v2[0];
+  v2[0]=d2_;
 }
 
 void Dados::getUltimos1(int ultimos[])
 {
-  ultimos[4]=v4_1_;
-  ultimos[3]=v3_1_;
-  ultimos[2]=v2_1_;
-  ultimos[1]=v1_1_;
-  ultimos[0]=v0_1_;
+  ultimos[4]=v1[4];
+  ultimos[3]=v1[3];
+  ultimos[2]=v1[2];
+  ultimos[1]=v1[1];
+  ultimos[0]=v1[0];
 }
 
 void Dados::getUltimos2(int ultimos[])
 {
-  ultimos[4]=v4_2_;
-  ultimos[3]=v3_2_;
-  ultimos[2]=v2_2_;
-  ultimos[1]=v1_2_;
-  ultimos[0]=v0_2_;
+  ultimos[4]=v2[4];
+  ultimos[3]=v2[3];
+  ultimos[2]=v2[2];
+  ultimos[1]=v2[1];
+  ultimos[0]=v2[0];
 }
