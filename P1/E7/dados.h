@@ -9,13 +9,13 @@
 #ifndef DADOS_H
 #define DADOS_H
 
-class Dados
+class Dados //
 {
 private:
 
   int d1_; //Valor del Dado 1
   int d2_; //Valor del Dado 2
-
+//Ponerlos como int y hacer casting en la función
   float lanz1_; //Número de lanzamientos del Dado 1
   float lanz2_; //Número de lanzamientos del Dado 2
 

@@ -27,7 +27,7 @@ Dados::Dados()
   
 }
 
-void Dados::lanzamiento()
+void Dados::lanzamiento() //Cambiar usando con set dado 1
 {
   d1_=(rand()%6)+1; //Se asigna un valor aleatorio al Dado 1
   d2_=(rand()%6)+1; //Se asigna un valor aleatorio al Dado 2
@@ -117,7 +117,7 @@ float Dados::getMedia2()
   return media; //Devolvemos el valor de la media
 }
 
-void Dados::ordena1()
+void Dados::ordena1() //Mover a la izquierda con un for y hacer privada
 { //Movemos los datos de izquierda a derecha borrando el último y almacenando el nuevo valor del dado
   v1[4]=v1[3];
   v1[3]=v1[2];
