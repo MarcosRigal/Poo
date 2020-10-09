@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ordena1_33',['ordena1',['../classDados.html#ad60a13a0879ccc82475c20d231caad9d',1,'Dados']]],
-  ['ordena2_34',['ordena2',['../classDados.html#adcbc36ccb655ce7c880b1deb3980a900',1,'Dados']]]
+  ['setdado1_31',['setDado1',['../classDados.html#a4d43ec4130428fdd3132778fafc74662',1,'Dados']]],
+  ['setdado2_32',['setDado2',['../classDados.html#aa32d31668b4661dea39e86c8fba4aba6',1,'Dados']]]
 ];

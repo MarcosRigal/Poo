@@ -8,22 +8,39 @@
 
 #ifndef DADOS_H
 #define DADOS_H
+#include <vector>
 
-class Dados //
+class Dados //Definición de la clase dados
 {
 private:
 
   int d1_; //Valor del Dado 1
   int d2_; //Valor del Dado 2
-//Ponerlos como int y hacer casting en la función
-  float lanz1_; //Número de lanzamientos del Dado 1
-  float lanz2_; //Número de lanzamientos del Dado 2
 
-  float sum1_; //Suma de los valores obtenidos al lanzar el Dado 1
-  float sum2_; //Suma de los valores obtenidos al lanzar el Dado 2
+  int lanz1_; //Número de lanzamientos del Dado 1
+  int lanz2_; //Número de lanzamientos del Dado 2
 
-  int v1[5]; //Vector que almacena los 5 últimos valores del Dado 1
-  int v2[5]; //Vector que almacena los 5 últimos valores del Dado 2
+  int sum1_; //Suma de los valores obtenidos al lanzar el Dado 1
+  int sum2_; //Suma de los valores obtenidos al lanzar el Dado 2
+
+  std::vector <int> v1; //Vector que almacena los 5 últimos valores del Dado 1
+  std::vector <int> v2; //Vector que almacena los 5 últimos valores del Dado 2
+  
+  /**
+   * @brief Añade el último valor del Dado 1
+   * 
+   * @return void
+   */
+
+  void ordena1();
+
+  /**
+   * @brief Añade el último valor del Dado 2
+   * 
+   * @return void
+   */
+
+  void ordena2();
 
 public:
   
@@ -47,7 +64,7 @@ public:
    * @return int 
    */
 
-  int getDado1();
+  inline int getDado1() const {return d1_;};
   
   /**
    * @brief Devuelve el valor del Dado 2
@@ -55,7 +72,7 @@ public:
    * @return int 
    */
 
-  int getDado2();
+  inline int getDado2() const {return d2_;}
 
   /**
    * @brief Asigna un valor al Dado 1
@@ -65,7 +82,7 @@ public:
    * @return False si no se ha podido asignar el valor
    */
 
-  bool setDado1(int v);
+  bool setDado1(const int &v);
 
   /**
    * @brief Asigna un valor al Dado 2
@@ -75,7 +92,7 @@ public:
    * @return False si no se ha podido asignar el valor
    */
 
-  bool setDado2(int v);
+  bool setDado2(const int &v);
 
   /**
    * @brief Devuelve el resultado de sumar el valor del Dado 1 y del Dado 2
@@ -83,7 +100,7 @@ public:
    * @return int 
    */
 
-  int getSuma();
+  inline int getSuma() const {return (d1_+d2_);}
 
   /**
    * @brief Devuelve el resultado de restar el valor del Dado 1 y del Dado 2
@@ -91,15 +108,14 @@ public:
    * @return int 
    */
 
-  int getDiferencia();
-
+  int getDiferencia() const;  
   /**
    * @brief Devuelve el número de lanzamientos del Dado 1
    * 
    * @return int 
    */
 
-  int getLanzamientos1();
+  inline int getLanzamientos1() const {return lanz1_;}
 
   /**
    * @brief Devuelve el número de lanzamientos del Dado 2
@@ -107,7 +123,7 @@ public:
    * @return int 
    */
 
-  int getLanzamientos2();
+  inline int getLanzamientos2() const {return lanz2_;}
 
   /**
    * @brief Devuelve la media de los valores del Dado 1
@@ -115,7 +131,7 @@ public:
    * @return float 
    */
 
-  float getMedia1();
+  float getMedia1() const;
 
   /**
    * @brief Devuelve la media de los valores del Dado 2
@@ -123,32 +139,16 @@ public:
    * @return float 
    */
 
-  float getMedia2();
-
-  /**
-   * @brief Añade el último valor del Dado 1
-   * 
-   * @return void
-   */
-
-  void ordena1();
-
-  /**
-   * @brief Añade el último valor del Dado 2
-   * 
-   * @return void
-   */
-
-  void ordena2();
+  float getMedia2() const;
 
   /**
    * @brief Copia al vector pasado como parámetro los últimos 5 valores del Dado 1
    * 
-   * @param Vectro de enteros
+   * @param Vector de enteros
    * @return void 
    */
 
-  void getUltimos1(int ultimos[]);
+  void getUltimos1(int ultimos[]) const;
 
   /**
    * @brief Copia al vector pasado como parámetro los últimos 5 valores del Dado 2
@@ -157,7 +157,7 @@ public:
    * @return void 
    */
 
-  void getUltimos2(int ultimos[]);
+  void getUltimos2(int ultimos[]) const;
 };
 
 #endif

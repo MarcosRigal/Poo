@@ -10,4 +10,6 @@ digraph "dados.cc"
   Node3 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="dados.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dados_8h.html",tooltip="La clase dados representa el lanzamiento de 2 dados."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }
