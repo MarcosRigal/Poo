@@ -33,7 +33,7 @@ public:
    * @param pais de la persona (opcional)
    */
 
-  inline Crupier(std::string dni, std::string codigo,std::string nombre = "", std::string apellidos = "", int edad = 0, std::string direccion = "", std::string localidad = "", std::string provincia = "", std::string pais = "") : Persona(dni, nombre, apellidos, edad, direccion, localidad, provincia, pais) {codigo_=codigo;} 
+  inline Crupier(std::string dni, std::string codigo, std::string nombre = "", std::string apellidos = "", int edad = 0, std::string direccion = "", std::string localidad = "", std::string provincia = "", std::string pais = "") : Persona(dni, nombre, apellidos, edad, direccion, localidad, provincia, pais) {codigo_=codigo;} 
   
   /**
    * @brief Asigna un código de empleado al crupier

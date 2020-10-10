@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['persona_42',['Persona',['../classPersona.html#aaaaf30dad91f302509197f047fa9cd6d',1,'Persona']]]
+  ['mayor_56',['mayor',['../classPersona.html#a4b7a1c688688318e297a882c338e4fe0',1,'Persona']]]
 ];
