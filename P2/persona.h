@@ -28,6 +28,15 @@ public:
 
   /**
    * @brief Crea un nuevo objeto persona
+   * 
+   * @param dni de la persona (obligatorio)
+   * @param nombre de la persona (opcional)
+   * @param apellidos de la persona (opcional)
+   * @param edad de la persona (opcional)
+   * @param direccion de la persona (opcional)
+   * @param localidad de la persona (opcional)
+   * @param provincia de la persona (opcional)
+   * @param pais de la persona (opcional)
    */
 
   Persona(std::string dni, std::string nombre = "", std::string apellidos = "", int edad = 0, std::string direccion = "", std::string localidad = "", std::string provincia = "", std::string pais = "");
