@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica 2. Introducción a la STL. Clases, herencia y ficheros en C++: Fichero Fuente persona.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="lasVegas.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 2. Introducción a la STL. Clases, herencia y ficheros en C++
+   </div>
+   <div id="projectbrief">Esta documentacion, pertenece a la segunda práctica de la asignatura de programacion orientada a objetos. En esta práctica he tenido que crear una clase padre persona. De ella heredan sus atributos las clases Crupier y Jugador. Para probar el buen funcionamiento de la clase y sus métodos debíamos de superar una serie de test proporcionados por el profesor.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">persona.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="persona_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef PERSONA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define PERSONA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classPersona.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPersona.html">Persona</a> <span class="comment">//Definición de la clase persona</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::string dni_; <span class="comment">//DNI de la persona</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  std::string nombre_; <span class="comment">//Nombre de la persona</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  std::string apellidos_; <span class="comment">//Apellidos de la persona</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> edad_; <span class="comment">//Edad de la persona</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  std::string direccion_; <span class="comment">//Dirección de la persona</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  std::string localidad_; <span class="comment">//Localidad de la persona</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::string provincia_; <span class="comment">//Provincia de la persona</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  std::string pais_; <span class="comment">//País de la persona</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classPersona.html#aaaaf30dad91f302509197f047fa9cd6d">Persona</a>(std::string dni, std::string nombre = <span class="stringliteral">&quot;&quot;</span>, std::string apellidos = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> edad = 0, std::string direccion = <span class="stringliteral">&quot;&quot;</span>, std::string localidad = <span class="stringliteral">&quot;&quot;</span>, std::string provincia = <span class="stringliteral">&quot;&quot;</span>, std::string pais = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classPersona.html#a02adbb2f5d9a1d6fd61e210a0cb555b1">   41</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a02adbb2f5d9a1d6fd61e210a0cb555b1">setDNI</a>(std::string <span class="keyword">const</span> dni) {dni_=dni;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classPersona.html#aebd28388d483fe3ef6f9cb6f787f90d7">   49</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#aebd28388d483fe3ef6f9cb6f787f90d7">getDNI</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> dni_;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classPersona.html#a22a79c3fb8b5ae1e58650372b56eed6c">   57</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a22a79c3fb8b5ae1e58650372b56eed6c">setNombre</a>(std::string <span class="keyword">const</span> nombre) {nombre_=nombre;}  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPersona.html#a5ae70e348c0307d32faaa37448de126e">   65</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#a5ae70e348c0307d32faaa37448de126e">getNombre</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> nombre_;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPersona.html#a9a60f85c4a6e83f91c3416aedb3b14ca">   73</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a9a60f85c4a6e83f91c3416aedb3b14ca">setApellidos</a>(std::string <span class="keyword">const</span> apellidos) {apellidos_=apellidos;}  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classPersona.html#afe868b7e67a62cbc104aa9cdfb8effa3">   81</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#afe868b7e67a62cbc104aa9cdfb8effa3">getApellidos</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> apellidos_;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classPersona.html#aed521e99697690fa59d578fb75407f94">setEdad</a>(<span class="keywordtype">int</span> <span class="keyword">const</span> &amp;edad);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classPersona.html#aefe0d245c256789528c1bd95acf8950b">   99</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classPersona.html#aefe0d245c256789528c1bd95acf8950b">getEdad</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> edad_;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classPersona.html#a49edf90ccfbb62a7648ea598e2c8324e">  107</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a49edf90ccfbb62a7648ea598e2c8324e">setDireccion</a>(std::string <span class="keyword">const</span> direccion) {direccion_=direccion;}  </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classPersona.html#a27707742dc5cd38e6b7bd311fe4a5c70">  115</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#a27707742dc5cd38e6b7bd311fe4a5c70">getDireccion</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> direccion_;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classPersona.html#a1ceaebb518cc0db9c71cde3a9999b72e">  123</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a1ceaebb518cc0db9c71cde3a9999b72e">setLocalidad</a>(std::string <span class="keyword">const</span> localidad) {localidad_=localidad;} </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classPersona.html#a376f3d2e1d10aa510e8989e3ec8feee6">  129</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#a376f3d2e1d10aa510e8989e3ec8feee6">getLocalidad</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> localidad_;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classPersona.html#ae69f878ab7fb7b04849b0a7c8a169609">  137</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#ae69f878ab7fb7b04849b0a7c8a169609">setProvincia</a>(std::string <span class="keyword">const</span> provincia) {provincia_=provincia;}  </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classPersona.html#adca8dca69a335ffb32b4a992a7510b27">  145</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#adca8dca69a335ffb32b4a992a7510b27">getProvincia</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> provincia_;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classPersona.html#a65c313eefb8ca304170b698fd9bc8a2b">  153</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classPersona.html#a65c313eefb8ca304170b698fd9bc8a2b">setPais</a>(std::string <span class="keyword">const</span> pais) {pais_=pais;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classPersona.html#abf62268c5f75b09c015f5149da406d6d">  161</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#abf62268c5f75b09c015f5149da406d6d">getPais</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pais_;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classPersona.html#a586445bf3aaeac4823884316bba85bce">  170</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classPersona.html#a586445bf3aaeac4823884316bba85bce">getApellidosyNombre</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> (apellidos_ + <span class="stringliteral">&quot;, &quot;</span> + nombre_);}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classPersona.html#a4b7a1c688688318e297a882c338e4fe0">mayor</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPersona_html_a9a60f85c4a6e83f91c3416aedb3b14ca"><div class="ttname"><a href="classPersona.html#a9a60f85c4a6e83f91c3416aedb3b14ca">Persona::setApellidos</a></div><div class="ttdeci">void setApellidos(std::string const apellidos)</div><div class="ttdoc">Asigna unos apellidos a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:73</div></div>
+<div class="ttc" id="aclassPersona_html_a02adbb2f5d9a1d6fd61e210a0cb555b1"><div class="ttname"><a href="classPersona.html#a02adbb2f5d9a1d6fd61e210a0cb555b1">Persona::setDNI</a></div><div class="ttdeci">void setDNI(std::string const dni)</div><div class="ttdoc">Asigna un DNI a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:41</div></div>
+<div class="ttc" id="aclassPersona_html_a65c313eefb8ca304170b698fd9bc8a2b"><div class="ttname"><a href="classPersona.html#a65c313eefb8ca304170b698fd9bc8a2b">Persona::setPais</a></div><div class="ttdeci">void setPais(std::string const pais)</div><div class="ttdoc">Asigna un pais a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:153</div></div>
+<div class="ttc" id="aclassPersona_html_aaaaf30dad91f302509197f047fa9cd6d"><div class="ttname"><a href="classPersona.html#aaaaf30dad91f302509197f047fa9cd6d">Persona::Persona</a></div><div class="ttdeci">Persona(std::string dni, std::string nombre=&quot;&quot;, std::string apellidos=&quot;&quot;, int edad=0, std::string direccion=&quot;&quot;, std::string localidad=&quot;&quot;, std::string provincia=&quot;&quot;, std::string pais=&quot;&quot;)</div><div class="ttdoc">Crea un nuevo objeto persona.</div><div class="ttdef"><b>Definition:</b> persona.cc:11</div></div>
+<div class="ttc" id="aclassPersona_html"><div class="ttname"><a href="classPersona.html">Persona</a></div><div class="ttdef"><b>Definition:</b> persona.h:14</div></div>
+<div class="ttc" id="aclassPersona_html_a4b7a1c688688318e297a882c338e4fe0"><div class="ttname"><a href="classPersona.html#a4b7a1c688688318e297a882c338e4fe0">Persona::mayor</a></div><div class="ttdeci">bool mayor()</div><div class="ttdoc">Permite comprobar si una persona es mayor de edad.</div><div class="ttdef"><b>Definition:</b> persona.cc:33</div></div>
+<div class="ttc" id="aclassPersona_html_aed521e99697690fa59d578fb75407f94"><div class="ttname"><a href="classPersona.html#aed521e99697690fa59d578fb75407f94">Persona::setEdad</a></div><div class="ttdeci">bool setEdad(int const &amp;edad)</div><div class="ttdoc">Asigna una edad a la persona.</div><div class="ttdef"><b>Definition:</b> persona.cc:23</div></div>
+<div class="ttc" id="aclassPersona_html_a5ae70e348c0307d32faaa37448de126e"><div class="ttname"><a href="classPersona.html#a5ae70e348c0307d32faaa37448de126e">Persona::getNombre</a></div><div class="ttdeci">std::string getNombre() const</div><div class="ttdoc">Devuelve el nombre de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:65</div></div>
+<div class="ttc" id="aclassPersona_html_a586445bf3aaeac4823884316bba85bce"><div class="ttname"><a href="classPersona.html#a586445bf3aaeac4823884316bba85bce">Persona::getApellidosyNombre</a></div><div class="ttdeci">std::string getApellidosyNombre() const</div><div class="ttdoc">Devuelve una cadena con el siguiente formato: apellidos, nombre.</div><div class="ttdef"><b>Definition:</b> persona.h:170</div></div>
+<div class="ttc" id="aclassPersona_html_abf62268c5f75b09c015f5149da406d6d"><div class="ttname"><a href="classPersona.html#abf62268c5f75b09c015f5149da406d6d">Persona::getPais</a></div><div class="ttdeci">std::string getPais() const</div><div class="ttdoc">Devuelve el pais de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:161</div></div>
+<div class="ttc" id="aclassPersona_html_a49edf90ccfbb62a7648ea598e2c8324e"><div class="ttname"><a href="classPersona.html#a49edf90ccfbb62a7648ea598e2c8324e">Persona::setDireccion</a></div><div class="ttdeci">void setDireccion(std::string const direccion)</div><div class="ttdoc">Asigna una direccion a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:107</div></div>
+<div class="ttc" id="aclassPersona_html_a22a79c3fb8b5ae1e58650372b56eed6c"><div class="ttname"><a href="classPersona.html#a22a79c3fb8b5ae1e58650372b56eed6c">Persona::setNombre</a></div><div class="ttdeci">void setNombre(std::string const nombre)</div><div class="ttdoc">Asigna un nombre a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:57</div></div>
+<div class="ttc" id="aclassPersona_html_adca8dca69a335ffb32b4a992a7510b27"><div class="ttname"><a href="classPersona.html#adca8dca69a335ffb32b4a992a7510b27">Persona::getProvincia</a></div><div class="ttdeci">std::string getProvincia() const</div><div class="ttdoc">Devuelve la provincia de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:145</div></div>
+<div class="ttc" id="aclassPersona_html_aebd28388d483fe3ef6f9cb6f787f90d7"><div class="ttname"><a href="classPersona.html#aebd28388d483fe3ef6f9cb6f787f90d7">Persona::getDNI</a></div><div class="ttdeci">std::string getDNI() const</div><div class="ttdoc">Devuelve el DNI de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:49</div></div>
+<div class="ttc" id="aclassPersona_html_aefe0d245c256789528c1bd95acf8950b"><div class="ttname"><a href="classPersona.html#aefe0d245c256789528c1bd95acf8950b">Persona::getEdad</a></div><div class="ttdeci">int getEdad() const</div><div class="ttdoc">Devuelve la edad de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:99</div></div>
+<div class="ttc" id="aclassPersona_html_ae69f878ab7fb7b04849b0a7c8a169609"><div class="ttname"><a href="classPersona.html#ae69f878ab7fb7b04849b0a7c8a169609">Persona::setProvincia</a></div><div class="ttdeci">void setProvincia(std::string const provincia)</div><div class="ttdoc">Asigna una provincia a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:137</div></div>
+<div class="ttc" id="aclassPersona_html_a376f3d2e1d10aa510e8989e3ec8feee6"><div class="ttname"><a href="classPersona.html#a376f3d2e1d10aa510e8989e3ec8feee6">Persona::getLocalidad</a></div><div class="ttdeci">std::string getLocalidad() const</div><div class="ttdoc">Devuelve la localidad de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:129</div></div>
+<div class="ttc" id="aclassPersona_html_a27707742dc5cd38e6b7bd311fe4a5c70"><div class="ttname"><a href="classPersona.html#a27707742dc5cd38e6b7bd311fe4a5c70">Persona::getDireccion</a></div><div class="ttdeci">std::string getDireccion() const</div><div class="ttdoc">Devuelve la direccion de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:115</div></div>
+<div class="ttc" id="aclassPersona_html_a1ceaebb518cc0db9c71cde3a9999b72e"><div class="ttname"><a href="classPersona.html#a1ceaebb518cc0db9c71cde3a9999b72e">Persona::setLocalidad</a></div><div class="ttdeci">void setLocalidad(std::string const localidad)</div><div class="ttdoc">Asigna una localidad a la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:123</div></div>
+<div class="ttc" id="aclassPersona_html_afe868b7e67a62cbc104aa9cdfb8effa3"><div class="ttname"><a href="classPersona.html#afe868b7e67a62cbc104aa9cdfb8effa3">Persona::getApellidos</a></div><div class="ttdeci">std::string getApellidos() const</div><div class="ttdoc">Devuelve los apellidos de la persona.</div><div class="ttdef"><b>Definition:</b> persona.h:81</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

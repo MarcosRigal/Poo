@@ -3,10 +3,21 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "${default}"
+        },
+        {
+            "name": "Poo",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu18",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "gcc-x64"
