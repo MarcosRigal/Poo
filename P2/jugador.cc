@@ -13,8 +13,7 @@
 void Jugador::setApuestas()
 {
   apuestas_.clear(); //Vaciamos la lista de apuestas del jugador
-  std::string fichero = (getDNI() + ".txt"); //fichero almacena el nombre del fichero que queremos abrir para ello concatenamos el DNI del jugador con la extensión.txt
-  std::ifstream f(fichero); //Creamos el puntero para abrir el fichero en modo lectura y lo abrimos introduciendo el nombre del fichero que queremos abrir en el parentesis
+  std::ifstream f((getDNI() + ".txt")); //Creamos el puntero para abrir el fichero en modo lectura y lo abrimos introduciendo el nombre del fichero que queremos abrir para ello concatenamos el DNI del jugador con la extensión.txt
   if (!f) //comprobamos que el fichero se haya abierto correctamente
   {
     std::cout<<"Error al abrir el archivo\n"; //Como no se ha abierto correctamente informamos al usuario de que ha habido un error
