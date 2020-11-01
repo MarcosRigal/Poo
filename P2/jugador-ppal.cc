@@ -20,7 +20,7 @@ int main()
   getchar();
   std::cout<<"\nIntroduzca los apellidos del juagador: ";
   getline(std::cin, apellidos);
-  std::cout<<"\nIntroduzca el edad del juagador: ";
+  std::cout<<"\nIntroduzca la edad del juagador: ";
   std::cin >> edad;
   std::cout<<"\nIntroduzca la dirección del juagador: ";
   std::cin >> direccion;
