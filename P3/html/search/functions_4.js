@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['getapellidos_71',['getApellidos',['../classPersona.html#afe868b7e67a62cbc104aa9cdfb8effa3',1,'Persona']]],
+  ['getapellidosynombre_72',['getApellidosyNombre',['../classPersona.html#a586445bf3aaeac4823884316bba85bce',1,'Persona']]],
+  ['getapuestas_73',['getApuestas',['../classJugador.html#ad0c3c97db8b29f7f93f66c9df670c807',1,'Jugador']]],
+  ['getbanca_74',['getBanca',['../classRuleta.html#aefc68c6dd2374ef45e7749ad79e788c7',1,'Ruleta']]],
+  ['getbola_75',['getBola',['../classRuleta.html#ae28c088a8b253579ae8ddb0444e83807',1,'Ruleta']]],
+  ['getcodigo_76',['getCodigo',['../classCrupier.html#a333886ae4f116303bd21ef0ba5d4b593',1,'Crupier::getCodigo()'],['../classJugador.html#aedd32bee8d003ed3f404e15e12c97899',1,'Jugador::getCodigo()']]],
+  ['getcrupier_77',['getCrupier',['../classRuleta.html#a0bcbdc32815ed8b41616d5a3c8a0720e',1,'Ruleta']]],
+  ['getdinero_78',['getDinero',['../classJugador.html#a82075be5b80d6f3b984a8da537cf07fd',1,'Jugador']]],
+  ['getdireccion_79',['getDireccion',['../classPersona.html#a27707742dc5cd38e6b7bd311fe4a5c70',1,'Persona']]],
+  ['getdni_80',['getDNI',['../classPersona.html#aebd28388d483fe3ef6f9cb6f787f90d7',1,'Persona']]],
+  ['getedad_81',['getEdad',['../classPersona.html#aefe0d245c256789528c1bd95acf8950b',1,'Persona']]],
+  ['getjugadores_82',['getJugadores',['../classRuleta.html#a3b77f4cbf902a651c4a89f78d3abbab9',1,'Ruleta']]],
+  ['getlocalidad_83',['getLocalidad',['../classPersona.html#a376f3d2e1d10aa510e8989e3ec8feee6',1,'Persona']]],
+  ['getnombre_84',['getNombre',['../classPersona.html#a5ae70e348c0307d32faaa37448de126e',1,'Persona']]],
+  ['getpais_85',['getPais',['../classPersona.html#abf62268c5f75b09c015f5149da406d6d',1,'Persona']]],
+  ['getpremios_86',['getPremios',['../classRuleta.html#a759939c22a10ffcb1838d3558a80e329',1,'Ruleta']]],
+  ['getprovincia_87',['getProvincia',['../classPersona.html#adca8dca69a335ffb32b4a992a7510b27',1,'Persona']]],
+  ['giraruleta_88',['giraRuleta',['../classRuleta.html#a1c267b47b9b874650d003dc08d77e1b5',1,'Ruleta']]]
+];

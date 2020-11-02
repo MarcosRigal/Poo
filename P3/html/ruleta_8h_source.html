@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programación Orientada a Objetos. Práctica 3: Fichero Fuente ruleta.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ruleta.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Programación Orientada a Objetos. Práctica 3
+   </div>
+   <div id="projectbrief">Esta documentacion, pertenece a la tercera práctica de la asignatura de programacion orientada a objetos. En esta práctica he tenido que crear una clase ruleta. Para probar el buen funcionamiento de la clase y sus métodos debíamos de superar una serie de test proporcionados por el profesor.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ruleta.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ruleta_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef RULETA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define RULETA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="crupier_8h.html">crupier.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="jugador_8h.html">jugador.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classRuleta.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRuleta.html">Ruleta</a> <span class="comment">//Definición de la clase ruleta</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">int</span> banca_;<span class="comment">//Saldo de la banca</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> bola_;<span class="comment">//Numero en el que ha caido la bola</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  std::list&lt;Jugador&gt; jugadores_;<span class="comment">//Lista de jugadores que juegan actualmente en la ruleta</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classCrupier.html">Crupier</a> crupier_;<span class="comment">//Crupier encargado de la ruleta</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classRuleta.html#af3eb38ceedf3aefb820b13c0ceb8a240">   33</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classRuleta.html#af3eb38ceedf3aefb820b13c0ceb8a240">Ruleta</a>(<a class="code" href="classCrupier.html">Crupier</a> <span class="keyword">const</span> &amp; crupier) : crupier_(crupier.getDNI(), crupier.getCodigo()){srand(time(NULL)); banca_=1000000; bola_=-1;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classRuleta.html#aefc68c6dd2374ef45e7749ad79e788c7">   41</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classRuleta.html#aefc68c6dd2374ef45e7749ad79e788c7">getBanca</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> banca_;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classRuleta.html#ae28c088a8b253579ae8ddb0444e83807">   49</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classRuleta.html#ae28c088a8b253579ae8ddb0444e83807">getBola</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> bola_;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#acd0bc037c4955010dcbd4783e186288d">setBanca</a>(<span class="keywordtype">int</span> <span class="keyword">const</span> &amp;saldo);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#a7e8b520094d3d9794cdaf00c70493efb">setBola</a>(<span class="keywordtype">int</span> <span class="keyword">const</span> &amp;valor);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classRuleta.html#a0bcbdc32815ed8b41616d5a3c8a0720e">   77</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classCrupier.html">Crupier</a> <a class="code" href="classRuleta.html#a0bcbdc32815ed8b41616d5a3c8a0720e">getCrupier</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> crupier_;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classRuleta.html#a717078f53b5c865862f6fa2fd194902d">   85</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classRuleta.html#a717078f53b5c865862f6fa2fd194902d">setCrupier</a>(<a class="code" href="classCrupier.html">Crupier</a> <span class="keyword">const</span> &amp;crupier) {crupier_=crupier;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classRuleta.html#a3b77f4cbf902a651c4a89f78d3abbab9">   93</a></span>&#160;  <span class="keyword">inline</span> std::list&lt;Jugador&gt; <a class="code" href="classRuleta.html#a3b77f4cbf902a651c4a89f78d3abbab9">getJugadores</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> jugadores_;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#afe7562ebeb881cac582fa55ddcfbaa27">addJugador</a>(<a class="code" href="classJugador.html">Jugador</a> &amp;jugador);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRuleta.html#a917fd421ee6d6d8ce8ca6b89084ccd25">deleteJugador</a>(std::string <span class="keyword">const</span> &amp;dni);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRuleta.html#a917fd421ee6d6d8ce8ca6b89084ccd25">deleteJugador</a>(<a class="code" href="classJugador.html">Jugador</a> &amp;jugador);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRuleta.html#acc8095e55fd4434294879571bd8a5f93">escribeJugadores</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRuleta.html#af841eae80f8c2417a76471197a693ce1">leeJugadores</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classRuleta.html#a1c267b47b9b874650d003dc08d77e1b5">  143</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classRuleta.html#a1c267b47b9b874650d003dc08d77e1b5">giraRuleta</a>(){<a class="code" href="classRuleta.html#a7e8b520094d3d9794cdaf00c70493efb">setBola</a>(((rand()%37)));};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#a2f38c0111aaaa7d43ae985237d86d317">aciertaColor</a>(std::string <span class="keyword">const</span> &amp;color);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#a98feb70e5dcc7a50c0cd52b0c4b2b1b5">aciertaParidad</a>(std::string <span class="keyword">const</span> &amp;paridad);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRuleta.html#ac0fd138fec0c050791e15c1c91b9ce0f">aciertaZona</a>(std::string <span class="keyword">const</span> &amp;zona);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRuleta.html#a759939c22a10ffcb1838d3558a80e329">getPremios</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassRuleta_html_acd0bc037c4955010dcbd4783e186288d"><div class="ttname"><a href="classRuleta.html#acd0bc037c4955010dcbd4783e186288d">Ruleta::setBanca</a></div><div class="ttdeci">bool setBanca(int const &amp;saldo)</div><div class="ttdoc">Modifica el saldo de la banca.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:14</div></div>
+<div class="ttc" id="aclassRuleta_html_ac0fd138fec0c050791e15c1c91b9ce0f"><div class="ttname"><a href="classRuleta.html#ac0fd138fec0c050791e15c1c91b9ce0f">Ruleta::aciertaZona</a></div><div class="ttdeci">bool aciertaZona(std::string const &amp;zona)</div><div class="ttdoc">Comprueba si el jugador ha ganado su apuesta.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:96</div></div>
+<div class="ttc" id="aclassJugador_html"><div class="ttname"><a href="classJugador.html">Jugador</a></div><div class="ttdef"><b>Definition:</b> jugador.h:22</div></div>
+<div class="ttc" id="aclassRuleta_html_a2f38c0111aaaa7d43ae985237d86d317"><div class="ttname"><a href="classRuleta.html#a2f38c0111aaaa7d43ae985237d86d317">Ruleta::aciertaColor</a></div><div class="ttdeci">bool aciertaColor(std::string const &amp;color)</div><div class="ttdoc">Comprueba si el jugador ha ganado su apuesta.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:34</div></div>
+<div class="ttc" id="aclassRuleta_html_af3eb38ceedf3aefb820b13c0ceb8a240"><div class="ttname"><a href="classRuleta.html#af3eb38ceedf3aefb820b13c0ceb8a240">Ruleta::Ruleta</a></div><div class="ttdeci">Ruleta(Crupier const &amp;crupier)</div><div class="ttdoc">Crea un nuevo objeto ruleta.</div><div class="ttdef"><b>Definition:</b> ruleta.h:33</div></div>
+<div class="ttc" id="aclassRuleta_html_af841eae80f8c2417a76471197a693ce1"><div class="ttname"><a href="classRuleta.html#af841eae80f8c2417a76471197a693ce1">Ruleta::leeJugadores</a></div><div class="ttdeci">void leeJugadores()</div><div class="ttdoc">Lee los datos de los jugadores del fichero: jugadores.txt y los pasa a la lista jugadores_.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:211</div></div>
+<div class="ttc" id="aclassRuleta_html_a717078f53b5c865862f6fa2fd194902d"><div class="ttname"><a href="classRuleta.html#a717078f53b5c865862f6fa2fd194902d">Ruleta::setCrupier</a></div><div class="ttdeci">void setCrupier(Crupier const &amp;crupier)</div><div class="ttdoc">Asigna el crupier pasado como parametro a la ruleta.</div><div class="ttdef"><b>Definition:</b> ruleta.h:85</div></div>
+<div class="ttc" id="aclassRuleta_html_a1c267b47b9b874650d003dc08d77e1b5"><div class="ttname"><a href="classRuleta.html#a1c267b47b9b874650d003dc08d77e1b5">Ruleta::giraRuleta</a></div><div class="ttdeci">void giraRuleta()</div><div class="ttdoc">Simula el lanzamiento de la bola en la ruleta en el casino devolviendo un numero aleatorio entre 0 y ...</div><div class="ttdef"><b>Definition:</b> ruleta.h:143</div></div>
+<div class="ttc" id="aclassRuleta_html_aefc68c6dd2374ef45e7749ad79e788c7"><div class="ttname"><a href="classRuleta.html#aefc68c6dd2374ef45e7749ad79e788c7">Ruleta::getBanca</a></div><div class="ttdeci">int getBanca() const</div><div class="ttdoc">Devuelve el saldo de la banca.</div><div class="ttdef"><b>Definition:</b> ruleta.h:41</div></div>
+<div class="ttc" id="aclassRuleta_html_a98feb70e5dcc7a50c0cd52b0c4b2b1b5"><div class="ttname"><a href="classRuleta.html#a98feb70e5dcc7a50c0cd52b0c4b2b1b5">Ruleta::aciertaParidad</a></div><div class="ttdeci">bool aciertaParidad(std::string const &amp;paridad)</div><div class="ttdoc">Comprueba si el jugador ha ganado su apuesta.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:65</div></div>
+<div class="ttc" id="aclassRuleta_html_acc8095e55fd4434294879571bd8a5f93"><div class="ttname"><a href="classRuleta.html#acc8095e55fd4434294879571bd8a5f93">Ruleta::escribeJugadores</a></div><div class="ttdeci">void escribeJugadores()</div><div class="ttdoc">Escribe los datos de la lista de jugadores en el fichero: jugadores.txt.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:193</div></div>
+<div class="ttc" id="ajugador_8h_html"><div class="ttname"><a href="jugador_8h.html">jugador.h</a></div><div class="ttdoc">La clase jugador representa a los jugadores del casino.</div></div>
+<div class="ttc" id="aclassRuleta_html_a759939c22a10ffcb1838d3558a80e329"><div class="ttname"><a href="classRuleta.html#a759939c22a10ffcb1838d3558a80e329">Ruleta::getPremios</a></div><div class="ttdeci">void getPremios()</div><div class="ttdoc">Se ejecuta despues de cada tirada y se encarga de actualizar el saldo de la banca y de los jugadores ...</div><div class="ttdef"><b>Definition:</b> ruleta.cc:248</div></div>
+<div class="ttc" id="aclassRuleta_html_a0bcbdc32815ed8b41616d5a3c8a0720e"><div class="ttname"><a href="classRuleta.html#a0bcbdc32815ed8b41616d5a3c8a0720e">Ruleta::getCrupier</a></div><div class="ttdeci">Crupier getCrupier() const</div><div class="ttdoc">Devuelve el crupier encargado de la ruleta.</div><div class="ttdef"><b>Definition:</b> ruleta.h:77</div></div>
+<div class="ttc" id="aclassCrupier_html"><div class="ttname"><a href="classCrupier.html">Crupier</a></div><div class="ttdef"><b>Definition:</b> crupier.h:14</div></div>
+<div class="ttc" id="aclassRuleta_html_ae28c088a8b253579ae8ddb0444e83807"><div class="ttname"><a href="classRuleta.html#ae28c088a8b253579ae8ddb0444e83807">Ruleta::getBola</a></div><div class="ttdeci">int getBola() const</div><div class="ttdoc">Devuelve el número en el que ha caido la bola.</div><div class="ttdef"><b>Definition:</b> ruleta.h:49</div></div>
+<div class="ttc" id="aclassRuleta_html_a3b77f4cbf902a651c4a89f78d3abbab9"><div class="ttname"><a href="classRuleta.html#a3b77f4cbf902a651c4a89f78d3abbab9">Ruleta::getJugadores</a></div><div class="ttdeci">std::list&lt; Jugador &gt; getJugadores() const</div><div class="ttdoc">Devuelve una lista con los jugadores que se encuentran actualmente jugando a la ruleta.</div><div class="ttdef"><b>Definition:</b> ruleta.h:93</div></div>
+<div class="ttc" id="aclassRuleta_html_a7e8b520094d3d9794cdaf00c70493efb"><div class="ttname"><a href="classRuleta.html#a7e8b520094d3d9794cdaf00c70493efb">Ruleta::setBola</a></div><div class="ttdeci">bool setBola(int const &amp;valor)</div><div class="ttdoc">Asigna un valor a la bola.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:24</div></div>
+<div class="ttc" id="aclassRuleta_html"><div class="ttname"><a href="classRuleta.html">Ruleta</a></div><div class="ttdef"><b>Definition:</b> ruleta.h:16</div></div>
+<div class="ttc" id="aclassRuleta_html_afe7562ebeb881cac582fa55ddcfbaa27"><div class="ttname"><a href="classRuleta.html#afe7562ebeb881cac582fa55ddcfbaa27">Ruleta::addJugador</a></div><div class="ttdeci">bool addJugador(Jugador &amp;jugador)</div><div class="ttdoc">Añade el jugador pasado como parámetro a la ruleta.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:127</div></div>
+<div class="ttc" id="acrupier_8h_html"><div class="ttname"><a href="crupier_8h.html">crupier.h</a></div><div class="ttdoc">La clase crupier representa a los trabajadores del casino.</div></div>
+<div class="ttc" id="aclassRuleta_html_a917fd421ee6d6d8ce8ca6b89084ccd25"><div class="ttname"><a href="classRuleta.html#a917fd421ee6d6d8ce8ca6b89084ccd25">Ruleta::deleteJugador</a></div><div class="ttdeci">int deleteJugador(std::string const &amp;dni)</div><div class="ttdoc">Borra el jugador cuyo dni coincide con el dni pasado como parámetro.</div><div class="ttdef"><b>Definition:</b> ruleta.cc:149</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programación Orientada a Objetos. Práctica 3: Fichero Fuente crupier.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ruleta.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Programación Orientada a Objetos. Práctica 3
+   </div>
+   <div id="projectbrief">Esta documentacion, pertenece a la tercera práctica de la asignatura de programacion orientada a objetos. En esta práctica he tenido que crear una clase ruleta. Para probar el buen funcionamiento de la clase y sus métodos debíamos de superar una serie de test proporcionados por el profesor.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">crupier.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="crupier_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef CRUPIER_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define CRUPIER_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="persona_8h.html">persona.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classCrupier.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCrupier.html">Crupier</a>: <span class="keyword">public</span> <a class="code" href="classPersona.html">Persona</a> <span class="comment">//Definición de la clase crupier que hereda sus atributos de la clase persona</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::string codigo_; <span class="comment">//Código de empleado del crupier</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classCrupier.html#a38743aaef11533abda5a691b3a6e5461">   36</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classCrupier.html#a38743aaef11533abda5a691b3a6e5461">Crupier</a>(std::string dni, std::string codigo, std::string nombre = <span class="stringliteral">&quot;&quot;</span>, std::string apellidos = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> edad = 0, std::string direccion = <span class="stringliteral">&quot;&quot;</span>, std::string localidad = <span class="stringliteral">&quot;&quot;</span>, std::string provincia = <span class="stringliteral">&quot;&quot;</span>, std::string pais = <span class="stringliteral">&quot;&quot;</span>) : <a class="code" href="classPersona.html">Persona</a>(dni, nombre, apellidos, edad, direccion, localidad, provincia, pais) {codigo_=codigo;} </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classCrupier.html#a591c12907f129113166418a4dd64441d">   44</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classCrupier.html#a591c12907f129113166418a4dd64441d">setCodigo</a>(std::string <span class="keyword">const</span> codigo) {codigo_=codigo;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classCrupier.html#a333886ae4f116303bd21ef0ba5d4b593">   52</a></span>&#160;  <span class="keyword">inline</span> std::string <a class="code" href="classCrupier.html#a333886ae4f116303bd21ef0ba5d4b593">getCodigo</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> codigo_;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassCrupier_html_a38743aaef11533abda5a691b3a6e5461"><div class="ttname"><a href="classCrupier.html#a38743aaef11533abda5a691b3a6e5461">Crupier::Crupier</a></div><div class="ttdeci">Crupier(std::string dni, std::string codigo, std::string nombre=&quot;&quot;, std::string apellidos=&quot;&quot;, int edad=0, std::string direccion=&quot;&quot;, std::string localidad=&quot;&quot;, std::string provincia=&quot;&quot;, std::string pais=&quot;&quot;)</div><div class="ttdoc">Crea un nuevo objeto crupier.</div><div class="ttdef"><b>Definition:</b> crupier.h:36</div></div>
+<div class="ttc" id="apersona_8h_html"><div class="ttname"><a href="persona_8h.html">persona.h</a></div><div class="ttdoc">La clase persona representa la entidad persona.</div></div>
+<div class="ttc" id="aclassPersona_html"><div class="ttname"><a href="classPersona.html">Persona</a></div><div class="ttdef"><b>Definition:</b> persona.h:14</div></div>
+<div class="ttc" id="aclassCrupier_html"><div class="ttname"><a href="classCrupier.html">Crupier</a></div><div class="ttdef"><b>Definition:</b> crupier.h:14</div></div>
+<div class="ttc" id="aclassCrupier_html_a591c12907f129113166418a4dd64441d"><div class="ttname"><a href="classCrupier.html#a591c12907f129113166418a4dd64441d">Crupier::setCodigo</a></div><div class="ttdeci">void setCodigo(std::string const codigo)</div><div class="ttdoc">Asigna un código de empleado al crupier.</div><div class="ttdef"><b>Definition:</b> crupier.h:44</div></div>
+<div class="ttc" id="aclassCrupier_html_a333886ae4f116303bd21ef0ba5d4b593"><div class="ttname"><a href="classCrupier.html#a333886ae4f116303bd21ef0ba5d4b593">Crupier::getCodigo</a></div><div class="ttdeci">std::string getCodigo() const</div><div class="ttdoc">Devuelve el código de empleado del crupier.</div><div class="ttdef"><b>Definition:</b> crupier.h:52</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
