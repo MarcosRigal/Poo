@@ -1,4 +1,10 @@
-//Programa principal prueba el funcionamiento de la clase Ruleta
+/**
+ * @file ruleta-ppal.cc
+ * @author Marcos Rivera Gavilán (i92rigam@uco.es)
+ * @brief Programa principal prueba el funcionamiento de la clase Ruleta
+ * @version 1.0
+ * @date 2020-10-07
+ */
 
 #include "ruleta.h"
 #include "jugador.h"
@@ -9,8 +15,40 @@
 
 int main()
 {
-  Crupier crupier("a","a");
-  std::string cadena;
+  system("clear");
+  std::cout<<" ___________________________________________________\n";
+  std::cout<<"|                                                   |\n";
+  std::cout<<"|---------------  Datos del crupier: ---------------|\n";
+  std::cout<<"|___________________________________________________|\n";
+  Crupier crupier("a","a");//Creamos un crupier para ir añadiendo los datos
+  std::string cadena;//Creamos una cadena para almacenar las lecturas de getline
+  std::cout<<"\nIntroduzca el DNI del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos el dni del crupier
+  crupier.setDNI(cadena);//Guardamos el dni en la estructura auxiliar
+  std::cout<<"\nIntroduzca el codigo del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos el código
+  crupier.setCodigo(cadena);//Guardamos el código en la estructura auxiliar
+  std::cout<<"\nIntroduzca el nombre del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos el nombre
+  crupier.setNombre(cadena);//Guardamos el nombre en la estructura auxiliar
+  std::cout<<"\nIntroduzca los apellidos del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos los apellidos
+  crupier.setApellidos(cadena);//Guardamos los apellidos en la estructura auxiliar
+  std::cout<<"\nIntroduzca la edad del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos la edad
+  crupier.setEdad(std::stoi(cadena));//Guardamos la edad en la estructura auxiliar
+  std::cout<<"\nIntroduzca la dirección del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos la dirección
+  crupier.setDireccion(cadena);//Guardamos la dirección en la estructura auxiliar
+  std::cout<<"\nIntroduzca la localidad del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos la localidad
+  crupier.setLocalidad(cadena);//Guardamos la localidad en la estructura auxiliar
+  std::cout<<"\nIntroduzca la provincia del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos la provincia
+  crupier.setProvincia(cadena);//Guardamos la provincia en la estructura auxiliar
+  std::cout<<"\nIntroduzca el pais del crupier: ";
+  getline(std::cin, cadena,'\n');//Leemos el pais
+  crupier.setPais(cadena);//Guardamos el pais en la estructura auxiliar
   Ruleta r(crupier);
   int select = 1;
   while (select !=0 )
