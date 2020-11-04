@@ -1,0 +1,3 @@
+No, porque no he necesitado crearlo. Lo único público son los metodos.
+Puede ser util para el usuario que utiliza la clase porque le permite acceder a los campos
+internos del objeto 

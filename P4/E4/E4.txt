@@ -1,0 +1,2 @@
+Si, para pasar argumentos a funciones que no quiero que sean modificados
+Si, porque el paso por mas referencia es mas rápido que el paso por valor

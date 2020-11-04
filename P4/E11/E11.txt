@@ -1,0 +1,2 @@
+Persona es la clase base de crupier y de jugador que son sus clases derivadas.
+Si

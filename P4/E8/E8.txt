@@ -1,0 +1,4 @@
+Por ahora solo lo he utilizado en esta práctica ya que en la otras no era necesario. 
+Lo mismo que con los operadores hasta ahora no los había necesitado.
+Son útiles porque facilitan trabajar con la clase y ayudan al usuario puesto que es mas intuitivo
+para hacer una copia usar un igual que llamar a un metodo que sea .copy 
