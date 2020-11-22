@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica 5. Programación orientada a objetos: Fichero Fuente dados.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dados.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 5. Programación orientada a objetos
+   </div>
+   <div id="projectbrief">Esta documentacion pertenece a la quinta práctica de la asignatura de programacion orientada a objetos. En esta práctica he tenido que añadir una un estractor y un insertador a la clase dados.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">dados.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dados_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef DADOS_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define DADOS_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classDados.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDados.html">Dados</a> <span class="comment">//Definición de la clase dados</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">int</span> d1_; <span class="comment">//Valor del Dado 1</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> d2_; <span class="comment">//Valor del Dado 2</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> lanz1_; <span class="comment">//Número de lanzamientos del Dado 1</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> lanz2_; <span class="comment">//Número de lanzamientos del Dado 2</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> sum1_; <span class="comment">//Suma de los valores obtenidos al lanzar el Dado 1</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> sum2_; <span class="comment">//Suma de los valores obtenidos al lanzar el Dado 2</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  std::vector &lt;int&gt; v1; <span class="comment">//Vector que almacena los 5 últimos valores del Dado 1</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  std::vector &lt;int&gt; v2; <span class="comment">//Vector que almacena los 5 últimos valores del Dado 2</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> ordena1();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> ordena2();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classDados.html#a2b508675f71c407db83d9ed204775d06">Dados</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDados.html#a6b708478ff15b0ba446fd176924b2a4b">lanzamiento</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classDados.html#a5748164e330e542a2904eb4bf87095b2">   68</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classDados.html#a5748164e330e542a2904eb4bf87095b2">getDado1</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> d1_;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classDados.html#ad00a8745e109291f8be1f784d198031c">   76</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classDados.html#ad00a8745e109291f8be1f784d198031c">getDado2</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> d2_;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classDados.html#a4d43ec4130428fdd3132778fafc74662">setDado1</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;v);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classDados.html#aa32d31668b4661dea39e86c8fba4aba6">setDado2</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;v);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classDados.html#a9bc70600f016ba5ec1488436ee44c4d6">  104</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classDados.html#a9bc70600f016ba5ec1488436ee44c4d6">getSuma</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> (d1_+d2_);}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classDados.html#a70a6ea52f53534207790df66e1ec9cfc">getDiferencia</a>() <span class="keyword">const</span>;  </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classDados.html#a3111e508ad627bc0da09406698af16fd">  119</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classDados.html#a3111e508ad627bc0da09406698af16fd">getLanzamientos1</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> lanz1_;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classDados.html#a49e07ef333fca637d20612c39df596a8">  127</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classDados.html#a49e07ef333fca637d20612c39df596a8">getLanzamientos2</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> lanz2_;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classDados.html#a6635fb824029c479bc23b90814c47e11">getMedia1</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classDados.html#a9386a16f8e9e479bd7b27e6332868e97">getMedia2</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDados.html#acb14330d82347281f761c594bc2f1ca2">getUltimos1</a>(<span class="keywordtype">int</span> ultimos[]) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDados.html#a017cbb8cc4a3aabc5bd030237c7b05cc">getUltimos2</a>(<span class="keywordtype">int</span> ultimos[]) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classDados.html#a9c4b8c8aae019c91c717e0e73f1b5b07">operator&lt;&lt;</a>(std::ostream &amp;stream, <span class="keyword">const</span> <a class="code" href="classDados.html">Dados</a> &amp;d);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">friend</span> std::istream &amp;<a class="code" href="classDados.html#a7c3138dcc6f946aae5e77174797d7858">operator&gt;&gt;</a>(std::istream &amp;stream, <a class="code" href="classDados.html">Dados</a> &amp;d);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassDados_html_a2b508675f71c407db83d9ed204775d06"><div class="ttname"><a href="classDados.html#a2b508675f71c407db83d9ed204775d06">Dados::Dados</a></div><div class="ttdeci">Dados()</div><div class="ttdoc">Crea un nuevo obejto dados.</div><div class="ttdef"><b>Definition:</b> dados.cc:13</div></div>
+<div class="ttc" id="aclassDados_html_aa32d31668b4661dea39e86c8fba4aba6"><div class="ttname"><a href="classDados.html#aa32d31668b4661dea39e86c8fba4aba6">Dados::setDado2</a></div><div class="ttdeci">bool setDado2(const int &amp;v)</div><div class="ttdoc">Asigna un valor al Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.cc:45</div></div>
+<div class="ttc" id="aclassDados_html_a5748164e330e542a2904eb4bf87095b2"><div class="ttname"><a href="classDados.html#a5748164e330e542a2904eb4bf87095b2">Dados::getDado1</a></div><div class="ttdeci">int getDado1() const</div><div class="ttdoc">Devuelve el valor del Dado 1.</div><div class="ttdef"><b>Definition:</b> dados.h:68</div></div>
+<div class="ttc" id="aclassDados_html"><div class="ttname"><a href="classDados.html">Dados</a></div><div class="ttdef"><b>Definition:</b> dados.h:14</div></div>
+<div class="ttc" id="aclassDados_html_a70a6ea52f53534207790df66e1ec9cfc"><div class="ttname"><a href="classDados.html#a70a6ea52f53534207790df66e1ec9cfc">Dados::getDiferencia</a></div><div class="ttdeci">int getDiferencia() const</div><div class="ttdoc">Devuelve el resultado de restar el valor del Dado 1 y del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.cc:58</div></div>
+<div class="ttc" id="aclassDados_html_a3111e508ad627bc0da09406698af16fd"><div class="ttname"><a href="classDados.html#a3111e508ad627bc0da09406698af16fd">Dados::getLanzamientos1</a></div><div class="ttdeci">int getLanzamientos1() const</div><div class="ttdoc">Devuelve el número de lanzamientos del Dado 1.</div><div class="ttdef"><b>Definition:</b> dados.h:119</div></div>
+<div class="ttc" id="aclassDados_html_a49e07ef333fca637d20612c39df596a8"><div class="ttname"><a href="classDados.html#a49e07ef333fca637d20612c39df596a8">Dados::getLanzamientos2</a></div><div class="ttdeci">int getLanzamientos2() const</div><div class="ttdoc">Devuelve el número de lanzamientos del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.h:127</div></div>
+<div class="ttc" id="aclassDados_html_a9c4b8c8aae019c91c717e0e73f1b5b07"><div class="ttname"><a href="classDados.html#a9c4b8c8aae019c91c717e0e73f1b5b07">Dados::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;stream, const Dados &amp;d)</div><div class="ttdoc">Insertador para la clase dados.</div><div class="ttdef"><b>Definition:</b> dados.cc:113</div></div>
+<div class="ttc" id="aclassDados_html_acb14330d82347281f761c594bc2f1ca2"><div class="ttname"><a href="classDados.html#acb14330d82347281f761c594bc2f1ca2">Dados::getUltimos1</a></div><div class="ttdeci">void getUltimos1(int ultimos[]) const</div><div class="ttdoc">Copia al vector pasado como parámetro los últimos 5 valores del Dado 1.</div><div class="ttdef"><b>Definition:</b> dados.cc:97</div></div>
+<div class="ttc" id="aclassDados_html_a4d43ec4130428fdd3132778fafc74662"><div class="ttname"><a href="classDados.html#a4d43ec4130428fdd3132778fafc74662">Dados::setDado1</a></div><div class="ttdeci">bool setDado1(const int &amp;v)</div><div class="ttdoc">Asigna un valor al Dado 1.</div><div class="ttdef"><b>Definition:</b> dados.cc:32</div></div>
+<div class="ttc" id="aclassDados_html_a6b708478ff15b0ba446fd176924b2a4b"><div class="ttname"><a href="classDados.html#a6b708478ff15b0ba446fd176924b2a4b">Dados::lanzamiento</a></div><div class="ttdeci">void lanzamiento()</div><div class="ttdoc">Lanza los dados.</div><div class="ttdef"><b>Definition:</b> dados.cc:26</div></div>
+<div class="ttc" id="aclassDados_html_a7c3138dcc6f946aae5e77174797d7858"><div class="ttname"><a href="classDados.html#a7c3138dcc6f946aae5e77174797d7858">Dados::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;stream, Dados &amp;d)</div><div class="ttdoc">Extractor para la clase dados.</div><div class="ttdef"><b>Definition:</b> dados.cc:122</div></div>
+<div class="ttc" id="aclassDados_html_a017cbb8cc4a3aabc5bd030237c7b05cc"><div class="ttname"><a href="classDados.html#a017cbb8cc4a3aabc5bd030237c7b05cc">Dados::getUltimos2</a></div><div class="ttdeci">void getUltimos2(int ultimos[]) const</div><div class="ttdoc">Copia al vector pasado como parámetro los últimos 5 valores del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.cc:105</div></div>
+<div class="ttc" id="aclassDados_html_a6635fb824029c479bc23b90814c47e11"><div class="ttname"><a href="classDados.html#a6635fb824029c479bc23b90814c47e11">Dados::getMedia1</a></div><div class="ttdeci">float getMedia1() const</div><div class="ttdoc">Devuelve la media de los valores del Dado 1.</div><div class="ttdef"><b>Definition:</b> dados.cc:63</div></div>
+<div class="ttc" id="aclassDados_html_ad00a8745e109291f8be1f784d198031c"><div class="ttname"><a href="classDados.html#ad00a8745e109291f8be1f784d198031c">Dados::getDado2</a></div><div class="ttdeci">int getDado2() const</div><div class="ttdoc">Devuelve el valor del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.h:76</div></div>
+<div class="ttc" id="aclassDados_html_a9386a16f8e9e479bd7b27e6332868e97"><div class="ttname"><a href="classDados.html#a9386a16f8e9e479bd7b27e6332868e97">Dados::getMedia2</a></div><div class="ttdeci">float getMedia2() const</div><div class="ttdoc">Devuelve la media de los valores del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.cc:74</div></div>
+<div class="ttc" id="aclassDados_html_a9bc70600f016ba5ec1488436ee44c4d6"><div class="ttname"><a href="classDados.html#a9bc70600f016ba5ec1488436ee44c4d6">Dados::getSuma</a></div><div class="ttdeci">int getSuma() const</div><div class="ttdoc">Devuelve el resultado de sumar el valor del Dado 1 y del Dado 2.</div><div class="ttdef"><b>Definition:</b> dados.h:104</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
