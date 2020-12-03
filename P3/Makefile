@@ -28,7 +28,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread -std=gnu++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = persona_unittest jugador_unittest crupier_unittest ruleta_unittest
+TESTS = persona_unittest jugador_unittest crupier_unittest ruleta_unittest my_test
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -87,6 +87,8 @@ jugador_unittest.o : jugador_unittest.cc jugador.h jugador.cc persona.h persona.
 
 ruleta_unittest.o : ruleta_unittest.cc jugador.h jugador.cc ruleta.h ruleta.cc persona.h persona.cc crupier.h crupier.cc
 
+my_test.o : my_test.cc jugador.h jugador.cc ruleta.h ruleta.cc persona.h persona.cc crupier.h crupier.cc
+
 persona_unittest : persona.o persona_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
 	
@@ -99,3 +101,5 @@ jugador_unittest : jugador.o persona.o jugador_unittest.o gtest_main.a
 ruleta_unittest : ruleta.o persona.o jugador.o crupier.o ruleta_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
 
+my_test : ruleta.o persona.o jugador.o crupier.o my_test.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@

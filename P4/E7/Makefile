@@ -29,7 +29,7 @@ CXXFLAGS += -g -Wall -pthread -std=gnu++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = contador_unittest
+TESTS = contador_unittest my_test
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -76,6 +76,10 @@ contador.o : contador.h contador.cc
 
 contador_unittest.o : contador_unittest.cc contador.cc contador.h
 
+my_test.o : my_test.cc contador.cc contador.h
+
 contador_unittest : contador.o contador_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
 
+my_test : contador.o my_test.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@

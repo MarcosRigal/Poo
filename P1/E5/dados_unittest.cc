@@ -68,3 +68,20 @@ TEST(Dados, Diferencia) {
 
   EXPECT_EQ(abs(d.getDado1()-d.getDado2()), d.getDiferencia());
 }
+
+/*
+--------------------- Mis test(Marcos) ----------------
+*/
+
+TEST(Dados, getDiferencia) {
+  Dados d;
+  d.setDado1(4);//Comprobamos que devuelva bien la diferencia cuando d1 es mayor que d2
+  d.setDado2(2);
+  EXPECT_EQ(2, d.getDiferencia());
+  d.setDado1(2);//Comprobamos que devuelva bien la diferencia cuando d2 es mayor que d1
+  d.setDado2(4);
+  EXPECT_EQ(2, d.getDiferencia());
+  d.setDado1(2);//Comprobamos que devuelva bien la diferencia cuando d1 es igual que d2
+  d.setDado2(2);
+  EXPECT_EQ(0, d.getDiferencia());
+}
